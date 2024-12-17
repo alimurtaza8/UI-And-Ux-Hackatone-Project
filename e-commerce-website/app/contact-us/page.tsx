@@ -3,12 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-// import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-// import { Button } from '@/components/ui/button';
-// import { MapPin, Mail, Phone } from 'lucide-react';
+import Footer from "@/components/Footer";
 
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -40,16 +38,16 @@ const Header: React.FC = () => {
         <div className="hidden lg:flex items-center space-x-4">
           {/* Login Link */}
           <Link
-            href="#"
-            className="text-gray-600 hover:text-gray-900 font-medium"
+            href="/login"
+            className="text-blue-600 hover:text-gray-900 font-medium"
           >
             Login
           </Link>
 
           {/* Become a Member Button */}
           <Link
-            href="#"
-            className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md font-medium flex items-center space-x-2"
+            href="/register"
+            className="bg-blue-400 hover:bg-blue-600 text-white py-2 px-4 rounded-md font-medium flex items-center space-x-2"
           >
             <span>Become a member</span>
             <span>→</span>
@@ -102,103 +100,89 @@ const Header: React.FC = () => {
           </Link>
           <div className="mt-4">
             <Link
-              href="#"
-              className="block text-gray-600 hover:text-gray-900 mb-2"
+              href="/#"
+              className="block text-blue-600 hover:text-gray-900 mb-2"
             >
               Login
             </Link>
             <Link
-              href="#"
+              href="/#"
             //   className="block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md font-medium"
             className="block bg-blue-500 hover:bg-blue-600 text-white  rounded-md font-medium"
             >
-              Become a member
+             Become a member
             </Link>
           </div>
         </div>
       )}
+
     </header>
   );
 };
 
-// export default Header;
 
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="bg-white py-16 sm:py-20 md:py-24 lg:py-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between">
+    <section className="relative bg-white py-16 sm:py-20 md:py-24 lg:py-28">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
         {/* Left Text Section */}
-        <div className="lg:w-1/2 text-center lg:text-left">
-          <h3 className="text-gray-500 text-sm font-semibold uppercase mb-2">
-            Contact Us
-          </h3>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <div>
+          <h3 className="text-gray-500 text-sm font-semibold uppercase mb-3">Contact Us</h3>
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             Get in touch today!
           </h1>
-          <p className="text-gray-500 text-base sm:text-lg mb-6">
+          <p className="text-gray-600 text-lg mb-8">
             We know how large objects will act, but things on a small scale.
           </p>
-
-          <div className="text-gray-700 space-y-4">
-            <p className="font-medium">
-              Phone: <span className="font-semibold text-gray-800">+451 215 215</span>
+          
+          <div className="space-y-4 mb-6">
+            <p className="text-gray-700 font-medium">
+              <span className="font-bold text-gray-900">Phone: +451 215 215</span> 
             </p>
-            <p className="font-medium">
-              Fax: <span className="font-semibold text-gray-800">+451 215 215</span>
-            </p>
-            <p className="font-medium flex items-center space-x-2">
-              <span className="font-semibold text-gray-800">
-                mudasirhanif5438@gmail.com
-              </span>
+            <p className="text-gray-700 font-medium">
+              <span className="font-bold text-gray-900">Fax: +451 215 215</span> 
             </p>
           </div>
 
           {/* Social Icons */}
-          <div className="flex space-x-4 mt-6">
-            <a
-              href="/images/icon.png"
-              className="text-gray-500 hover:text-gray-800 transition-colors"
-            >
+          <div className="flex space-x-6">
+            <a href="#" className="text-gray-600 hover:text-gray-900 transition">
               <i className="fab fa-twitter text-2xl"></i>
             </a>
-            <a
-              href="#"
-              className="text-gray-500 hover:text-gray-800 transition-colors"
-            >
+            <a href="#" className="text-gray-600 hover:text-gray-900 transition">
               <i className="fab fa-facebook text-2xl"></i>
             </a>
-            <a
-              href="#"
-              className="text-gray-500 hover:text-gray-800 transition-colors"
-            >
+            <a href="#" className="text-gray-600 hover:text-gray-900 transition">
               <i className="fab fa-instagram text-2xl"></i>
             </a>
-            <a
-              href="#"
-              className="text-gray-500 hover:text-gray-800 transition-colors"
-            >
+            <a href="#" className="text-gray-600 hover:text-gray-900 transition">
               <i className="fab fa-linkedin text-2xl"></i>
             </a>
           </div>
         </div>
 
         {/* Right Image Section */}
-        <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
-          <div className="relative">
-            <img
-              src="/images/check.png"
-              alt="Contact Us Family"
-              className="rounded-md shadow-lg w-full max-w-md lg:max-w-full"
-            />
-            {/* Decorative Circle */}
-            <div className="absolute -z-10 bg-pink-100 w-40 h-40 sm:w-64 sm:h-64 rounded-full top-8 right-12"></div>
-          </div>
+        <div className="relative">
+          {/* Main Image */}
+          <img
+            src="/images/contactHero.png"
+            alt="Contact Us Family"
+            className="w-full max-w-md mx-auto lg:max-w-full relative z-10"
+          />
+
+          {/* Decorative Circle Shapes */}
+          <div className="absolute top-10 right-0 w-32 h-32 bg-pink-100 rounded-full -z-10"></div>
+          <div className="absolute bottom-0 left-0 w-20 h-20 bg-purple-200 rounded-full -z-10"></div>
         </div>
       </div>
     </section>
   );
 };
+
+
+
+
 
 
 const BusinessSection = () => {
@@ -241,7 +225,7 @@ const BusinessSection = () => {
           </div>
   
           {/* Card 2 */}
-          <div className="bg-gray-800 shadow-md p-6 rounded-lg text-center text-white">
+          <div className="bg-custom-blue shadow-md p-6 rounded-lg text-center text-white">
             <div className="flex justify-center mb-4">
               <Image
                 src="/images/d-3.png" 
@@ -323,8 +307,8 @@ export default function ContactUs() {
             <HeroSection />
              <BusinessSection />
             <LetsTalkSection />
-             
-
+            <Footer />
+  
 
         </div>
     );

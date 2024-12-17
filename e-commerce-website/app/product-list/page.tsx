@@ -1,15 +1,134 @@
 "use client";
 import Image from "next/image";
 
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { ChevronRight } from 'lucide-react';
+// import { Card, CardContent } from "@/components/ui/card";
+// import { ChevronRight } from 'lucide-react';
 
 // import React { useState } from "react";
 import React , {useState} from "react";
 import { FaInstagram, FaYoutube, FaTwitter ,FaBars, FaTimes} from "react-icons/fa";
 import Link from "next/link";
+import Footer from "@/components/Footer";
+import BestsellerProducts from "@/components/BestsellerProducts";
 
 
+
+// const Header = () => {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+//   const toggleMenu = () => {
+//     setIsMenuOpen(!isMenuOpen);
+//   };
+
+//   return (
+//     <header className="w-full">
+//       {/* Top Bar */}
+//       <div className="bg-green-900 text-white text-sm py-2 px-4 
+//         flex flex-col md:flex-row justify-between items-center 
+//         space-y-2 md:space-y-0">
+//         <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start w-full md:w-auto">
+//           <span className="flex items-center gap-2">📞 (225) 555-0118</span>
+//           <span className="flex items-center gap-2">✉️ michelle.rivera@example.com</span>
+//         </div>
+//         <div className="flex flex-col md:flex-row items-center gap-4">
+//           <span className="hidden md:block">Follow Us and get a chance to win 80% off</span>
+//           <div className="flex items-center gap-2">
+//             <span className="hidden md:block">Follow Us:</span>
+//             <div className="flex items-center gap-2">
+//               <a href="#" aria-label="Instagram" className="text-white hover:text-gray-300">
+//                 <FaInstagram />
+//               </a>
+//               <a href="#" aria-label="YouTube" className="text-white hover:text-gray-300">
+//                 <FaYoutube />
+//               </a>
+//               <a href="#" aria-label="Twitter" className="text-white hover:text-gray-300">
+//                 <FaTwitter />
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Main Header */}
+//       <div className="flex flex-wrap justify-between items-center py-4 px-4 md:px-6 border-b relative">
+//         {/* Logo */}
+//         <div className="text-xl font-bold w-1/2 md:w-auto flex justify-start items-center">
+//           <h1 className="text-2xl md:text-4xl font-extrabold text-black">Bandage</h1>
+//         </div>
+
+//         {/* Mobile Menu Toggle */}
+//         <div className="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
+//           <button 
+//             onClick={toggleMenu} 
+//             className="text-2xl focus:outline-none"
+//             aria-label="Toggle Menu"
+//           >
+//             {isMenuOpen ? <FaTimes /> : <FaBars />}
+//           </button>
+//         </div>
+
+//         {/* Navigation */}
+//         <nav className={`
+//           ${isMenuOpen ? 'block' : 'hidden'} 
+//           md:block 
+//           w-full md:w-auto 
+//           absolute md:relative 
+//           top-full left-0 
+//           bg-white md:bg-transparent 
+//           shadow-lg md:shadow-none 
+//           z-50 md:z-auto
+//         `}>
+//           <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-lg p-4 md:p-0">
+//             {[
+//               { href: "./", label: "Home" },
+//               { href: "./product-list", label: "Shop" },
+//               { href: "/about", label: "About" },
+//               { href: "#", label: "Blog" },
+//               { href: "./contact-us", label: "Contact" },
+//               { href: "#", label: "Pages" }
+//             ].map((link) => (
+//               <li key={link.label} className="w-full md:w-auto text-center">
+//                 <Link 
+//                   href={link.href} 
+//                   className="text-black hover:text-blue-600 transition block md:inline"
+//                 >
+//                   {link.label}
+//                 </Link>
+//               </li>
+//             ))}
+//           </ul>
+//         </nav>
+
+//         {/* Actions */}
+//         <div className={`
+//           ${isMenuOpen ? 'block' : 'hidden'} 
+//           md:block 
+//           w-full md:w-auto 
+//           absolute md:relative 
+//           top-full left-0 
+//           bg-white md:bg-transparent 
+//           shadow-lg md:shadow-none 
+//           z-50 md:z-auto 
+//           p-4 md:p-0
+//         `}>
+//           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-lg">
+//             <Link 
+//               href="#" 
+//               className="text-blue-400 hover:text-blue-600 transition text-center w-full md:w-auto"
+//             >
+//               Login / Register
+//             </Link>
+//             <div className="flex items-center justify-center gap-4">
+//               <Link href="#" aria-label="Search" className="text-gray-700 hover:text-blue-600 transition">🔍</Link>
+//               <Link href="#" aria-label="Cart" className="text-gray-700 hover:text-blue-600 transition">🛒</Link>
+//               <Link href="#" aria-label="Wishlist" className="text-gray-700 hover:text-blue-600 transition">❤️</Link>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </header>
+//   );
+// };
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,46 +138,47 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full">
+    <header className="w-full font-sans">
       {/* Top Bar */}
-      <div className="bg-green-900 text-white text-sm py-2 px-4 
-        flex flex-col md:flex-row justify-between items-center 
-        space-y-2 md:space-y-0">
-        <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start w-full md:w-auto">
-          <span className="flex items-center gap-2">📞 (225) 555-0118</span>
-          <span className="flex items-center gap-2">✉️ michelle.rivera@example.com</span>
+      <div className="bg-custom-green text-white text-sm py-2 px-4 flex flex-col md:flex-row justify-between items-center p-4">
+        {/* Left: Contact Info */}
+        <div className="flex items-center gap-4">
+          <span className="flex items-center gap-2">
+            📞 <a href="tel:(225)555-0118">(225) 555-0118</a>
+          </span>
+          <span className="flex items-center gap-2">
+            ✉️ <a href="mailto:michelle.rivera@example.com">michelle.rivera@example.com</a>
+          </span>
         </div>
-        <div className="flex flex-col md:flex-row items-center gap-4">
-          <span className="hidden md:block">Follow Us and get a chance to win 80% off</span>
-          <div className="flex items-center gap-2">
-            <span className="hidden md:block">Follow Us:</span>
-            <div className="flex items-center gap-2">
-              <a href="#" aria-label="Instagram" className="text-white hover:text-gray-300">
-                <FaInstagram />
-              </a>
-              <a href="#" aria-label="YouTube" className="text-white hover:text-gray-300">
-                <FaYoutube />
-              </a>
-              <a href="#" aria-label="Twitter" className="text-white hover:text-gray-300">
-                <FaTwitter />
-              </a>
-            </div>
-          </div>
+        {/* Center: Promo Text */}
+        <span className="hidden md:block text-center">
+          Follow Us and get a chance to win 80% off
+        </span>
+        {/* Right: Social Links */}
+        <div className="flex items-center gap-3">
+          <span className="hidden md:block">Follow Us:</span>
+          <a href="#" aria-label="Instagram" className="hover:text-gray-300">
+            <FaInstagram />
+          </a>
+          <a href="#" aria-label="YouTube" className="hover:text-gray-300">
+            <FaYoutube />
+          </a>
+          <a href="#" aria-label="Twitter" className="hover:text-gray-300">
+            <FaTwitter />
+          </a>
         </div>
       </div>
 
       {/* Main Header */}
-      <div className="flex flex-wrap justify-between items-center py-4 px-4 md:px-6 border-b relative">
+      <div className="flex justify-between items-center py-4 px-4 md:px-6 border-b relative">
         {/* Logo */}
-        <div className="text-xl font-bold w-1/2 md:w-auto flex justify-start items-center">
-          <h1 className="text-2xl md:text-4xl font-extrabold text-black">Bandage</h1>
-        </div>
+        <h1 className="text-2xl md:text-4xl font-bold text-black">Bandage</h1>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
-          <button 
-            onClick={toggleMenu} 
-            className="text-2xl focus:outline-none"
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="text-2xl text-black focus:outline-none"
             aria-label="Toggle Menu"
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -66,29 +186,24 @@ const Header = () => {
         </div>
 
         {/* Navigation */}
-        <nav className={`
-          ${isMenuOpen ? 'block' : 'hidden'} 
-          md:block 
-          w-full md:w-auto 
-          absolute md:relative 
-          top-full left-0 
-          bg-white md:bg-transparent 
-          shadow-lg md:shadow-none 
-          z-50 md:z-auto
-        `}>
-          <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-lg p-4 md:p-0">
+        <nav
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } md:flex md:items-center md:gap-6 absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent z-50`}
+        >
+          <ul className="flex flex-col md:flex-row items-center gap-4 text-lg">
             {[
               { href: "./", label: "Home" },
               { href: "./product-list", label: "Shop" },
               { href: "/about", label: "About" },
               { href: "#", label: "Blog" },
               { href: "./contact-us", label: "Contact" },
-              { href: "#", label: "Pages" }
+              { href: "#", label: "Pages" },
             ].map((link) => (
-              <li key={link.label} className="w-full md:w-auto text-center">
-                <Link 
-                  href={link.href} 
-                  className="text-black hover:text-blue-600 transition block md:inline"
+              <li key={link.label}>
+                <Link
+                  href={link.href}
+                  className="text-black hover:text-blue-600 transition"
                 >
                   {link.label}
                 </Link>
@@ -98,29 +213,35 @@ const Header = () => {
         </nav>
 
         {/* Actions */}
-        <div className={`
-          ${isMenuOpen ? 'block' : 'hidden'} 
-          md:block 
-          w-full md:w-auto 
-          absolute md:relative 
-          top-full left-0 
-          bg-white md:bg-transparent 
-          shadow-lg md:shadow-none 
-          z-50 md:z-auto 
-          p-4 md:p-0
-        `}>
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-lg">
-            <Link 
-              href="#" 
-              className="text-blue-400 hover:text-blue-600 transition text-center w-full md:w-auto"
+        <div className="hidden md:flex items-center gap-6">
+          <Link
+            href="#"
+            className="text-blue-500 hover:text-blue-700 transition"
+          >
+            Login / Register
+          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="#"
+              aria-label="Search"
+              className="hover:text-blue-600 transition"
             >
-              Login / Register
+              🔍
             </Link>
-            <div className="flex items-center justify-center gap-4">
-              <Link href="#" aria-label="Search" className="text-gray-700 hover:text-blue-600 transition">🔍</Link>
-              <Link href="#" aria-label="Cart" className="text-gray-700 hover:text-blue-600 transition">🛒</Link>
-              <Link href="#" aria-label="Wishlist" className="text-gray-700 hover:text-blue-600 transition">❤️</Link>
-            </div>
+            <Link
+              href="#"
+              aria-label="Cart"
+              className="hover:text-blue-600 transition"
+            >
+              🛒
+            </Link>
+            <Link
+              href="#"
+              aria-label="Wishlist"
+              className="hover:text-blue-600 transition"
+            >
+              ❤️
+            </Link>
           </div>
         </div>
       </div>
@@ -128,99 +249,93 @@ const Header = () => {
   );
 };
 
+
+
+
 const ProductHero = () => {
-  // Sample product data
   const products = [
-    {
-      image: '/images/avl-1.jpg',
-      title: 'Cloths',
-      count: 5,
-    },
-    {
-      image: '/images/avl-2.jpg',
-      title: 'Cloths',
-      count: 5,
-    },
-    {
-      image: '/images/avl-3.jpg',
-      title: 'Cloths',
-      count: 5,
-    },
-    {
-      image: '/images/avl-4.jpg',
-      title: 'Cloths',
-      count: 5,
-    },
-    {
-      image: '/images/avl-2.jpg',
-      title: 'Cloths',
-      count: 5,
-    },
+    { image: '/images/products/C-1.png'},
+    { image: '/images/products/C-2.png'},
+    { image: '/images/products/C-3.png'},
+    { image: '/images/products/C-4.png'},
+    { image: '/images/products/C-5.png'},
+   
   ];
 
   return (
-    <div className="container mx-auto py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    <div className="container mx-auto py-8 px-4">
+      {/* Product Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {products.map((product, index) => (
-          <Card key={index} className="h-full">
-            <div className="relative h-48">
+          <div
+            key={index}
+            className="relative group rounded-lg overflow-hidden shadow-md"
+          >
+            {/* Image */}
+            <div className="w-full h-56 relative">
               <Image
                 src={product.image}
-                alt={product.title}
-                fill
-                className="object-cover"
+                // alt={product.title}
+                alt="Clotes"
+                layout="fill"
+                objectFit="cover"
+                className="transition-transform duration-300 group-hover:scale-110"
               />
             </div>
-            <CardContent>
-              <div className="flex items-center justify-between">
-                <CardTitle>{product.title}</CardTitle>
-                <span className="text-gray-500">{product.count} items</span>
-              </div>
-            </CardContent>
-          </Card>
+            {/* Overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
+              <h2 className="text-white text-lg font-bold uppercase">
+                {/* {product.title} */}
+              </h2>
+              {/* <p className="text-white text-sm">{product.count} Items</p> */}
+            </div>
+          </div>
         ))}
       </div>
-      <div className="flex justify-between items-center mt-4">
-        <p className="text-gray-500">Showing all 12 results</p>
-        <div className="flex items-center space-x-2">
-          <button className="text-blue-500 hover:text-blue-700">
+
+      {/* Controls Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center mt-8">
+        <p className="text-gray-500 text-sm">Showing all 12 results</p>
+        <div className="flex items-center space-x-4 mt-4 md:mt-0">
+          {/* Grid View */}
+          <button className="p-2 border rounded-md hover:bg-gray-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 text-gray-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="w-6 h-6"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+          </button>
+          {/* List View */}
+          <button className="p-2 border rounded-md hover:bg-gray-100">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 text-gray-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5"
               />
             </svg>
           </button>
-          <button className="text-gray-500 hover:text-gray-700">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 10h16M4 14h16M4 18h16"
-              />
-            </svg>
-          </button>
-          <select className="px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+
+          {/* Dropdown */}
+          <select className="px-3 py-1 border rounded-md text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option>Popularity</option>
             <option>Price: Low to High</option>
             <option>Price: High to Low</option>
           </select>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">
+
+          {/* Filter Button */}
+          <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
             Filter
           </button>
         </div>
@@ -229,77 +344,31 @@ const ProductHero = () => {
   );
 };
 
-// export default ProductListPage;
-
-
-
-const BestsellerProducts= () => {
-    return (
-      <section className="bg-white py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold">BESTSELLER PRODUCTS</h2>
-            <p className="text-gray-600 mt-2">Problems trying to resolve the conflict between</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Product Cards */}
-            {[1, 2, 3, 4,5,6,7,8].map((item) => (
-              <div className="col-span-1" key={item}>
-                <Card>
-                  <CardContent>
-                    <img
-                      // src={`/graphic-design-${item}.jpg`}
-                      src="/images/image-5.jpg"
-                      alt={`Graphic Design ${item}`}
-                      className="w-full h-auto"
-                    />
-                    <div className="mt-4">
-                      <h3 className="text-lg font-medium">Graphic Design</h3>
-                      <p className="text-gray-600">English Department</p>
-                      <p className="text-blue-500 font-medium mt-2">$16.48</p>
-                      <a
-                        href="#"
-                        className="flex items-center text-blue-500 hover:text-blue-600 mt-4"
-                      >
-                        <span>Shop Now</span>
-                        <ChevronRight size={18} className="ml-2" />
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-  
-  
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  };
-
 
   const BigCompaniesSection: React.FC = () => {
     const companies = [
-      '/images/avg-1.svg',
-      '/images/avg-2.svg',
-      '/images/avg-3.svg',
-      '/images/avg-4.svg',
-      '/images/avg-5.svg',
+      '/images/companies-logo/Logo-1.png',
+      '/images/companies-logo/Logo-2.png',
+     '/images/companies-logo/Logo-3.png',
+      '/images/companies-logo/Logo-4.png',
+      '/images/companies-logo/Logo-5.png',
+      '/images/companies-logo/Logo-6.png',
     ];
   
     return (
-      <section className="bg-white py-16 sm:py-24">
+      <section className="bg-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          {/* <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
             Big Companies Are Here
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+          </h2> */}
+          <div className="flex justify-center items-center space-x-8">
             {companies.map((logo, index) => (
-              <div
-                key={index}
-                className="bg-gray-100 rounded-lg shadow-md p-6 flex items-center justify-center"
-              >
-                <img src={logo} alt={`Company ${index + 1} Logo`} className="w-32 h-auto" />
+              <div key={index} className="flex items-center justify-center">
+                <img
+                  src={logo}
+                  alt={`Company ${index + 1} Logo`}
+                  className="w-24 h-auto"
+                />
               </div>
             ))}
           </div>
@@ -315,6 +384,7 @@ const ProductListPage = () => {
         <ProductHero />
         {/* <Footer /> */}
         <BigCompaniesSection />
+        <Footer />
         <BestsellerProducts />
 
       </div>

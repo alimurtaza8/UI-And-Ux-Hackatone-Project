@@ -10,6 +10,8 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+			'custom-green': 'rgba(35, 133, 109, 1)',
+			'custom-blue': 'rgba(37,43,66,1)',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
