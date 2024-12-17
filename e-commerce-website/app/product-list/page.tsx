@@ -352,7 +352,7 @@ const ProductHero = () => {
      '/images/companies-logo/Logo-3.png',
       '/images/companies-logo/Logo-4.png',
       '/images/companies-logo/Logo-5.png',
-      '/images/companies-logo/Logo-6.png',
+      '/images/companies-logo/Logo.png'
     ];
   
     return (
