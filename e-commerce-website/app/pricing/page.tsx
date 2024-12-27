@@ -25,6 +25,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-8 text-gray-600 font-medium">
+        <Link href="./" className="hover:text-gray-900">Home</Link>
           <Link href="/product-list" className="hover:text-gray-900">
             Product
           </Link>
@@ -135,7 +136,7 @@ const Header = () => {
         <div className="p-4 flex flex-col items-center ">
         
           <p className="text-sm text-gray-500 font-bold mt-4">PRICING</p>
-          <h1 className="text-5xl font-bold text-black mt-4">Simple Pricing</h1>
+          <h1 className="text-xl md:text-5xl font-bold text-black mt-4">Simple Pricing</h1>
   
           
           <nav className=" text-sm text-grey-500  mt-4">

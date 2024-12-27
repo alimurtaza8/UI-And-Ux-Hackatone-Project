@@ -23,6 +23,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-8 text-gray-600 font-medium">
+        <Link href="./" className="hover:text-gray-900">Home</Link>
           <Link href="/product-list" className="hover:text-gray-900">
             Product
           </Link>

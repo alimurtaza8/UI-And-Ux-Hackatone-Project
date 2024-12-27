@@ -85,9 +85,9 @@ const Header = () => {
               { href: "./", label: "Home" },
               { href: "./product-list", label: "Shop" },
               { href: "/about", label: "About" },
-              { href: "#", label: "Blog" },
+              { href: "/blog", label: "Blog" },
               { href: "./contact-us", label: "Contact" },
-              { href: "#", label: "Pages" }
+              { href: "/team", label: "Team" }
             ].map((link) => (
               <li key={link.label} className="w-full md:w-auto text-center">
                 <Link 
