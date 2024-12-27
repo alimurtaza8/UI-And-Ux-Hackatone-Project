@@ -345,7 +345,7 @@ const productImages = [
                 { href: "/about", label: "About" },
                 { href: "#", label: "Blog" },
                 { href: "./contact-us", label: "Contact" },
-                { href: "#", label: "Pages" },
+                { href: "/team", label: "Team" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
