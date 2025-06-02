@@ -213,7 +213,7 @@ const BestSellersSection = () => {
       name: "Sumatriptan 50mg",
       price: "£15.00",
       image: "/images/products/sumatriptan.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/sumatriptan-50mg",
     },
 
    

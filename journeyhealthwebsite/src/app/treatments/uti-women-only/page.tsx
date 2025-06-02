@@ -194,7 +194,7 @@ const BestSellersSection = () => {
       name: "Nitrofurantoin 100mg",
       price: "£15.00",
       image: "/images/products/nitro.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/nitrofurantoin-100mg",
     },
   
   ];

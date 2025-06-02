@@ -403,7 +403,7 @@ const ProductsList: React.FC = () => {
 
 
   return (
-    <section className="min-h-screen py-16 px-4 sm:px-6 lg:px-8  mx-auto bg-gray-50">
+    <section className=" min-h-screen py-16 px-4 sm:px-6 lg:px-8  mx-auto bg-gray-50">
       <h2 className="text-4xl font-bold text-teal-900 mb-12">Welcome to our Shop</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

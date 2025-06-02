@@ -215,7 +215,7 @@ const BestSellersSection = () => {
       name: "Melatonin 3mg",
       price: "£15.00",
       image: "/images/products/melatonin.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/melatonin-3mg",
     },
 
    

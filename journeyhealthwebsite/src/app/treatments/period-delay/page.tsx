@@ -207,7 +207,7 @@ const BestSellersSection = () => {
       name: "Period Delay Tablets",
       price: "£15.00",
       image: "/images/products/norethisterone.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/period-delay-tablets",
     },
 
    

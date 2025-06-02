@@ -371,20 +371,20 @@ const BestSellersSection = () => {
         name: "Sildenafil 50mg",
         image: "/images/products/slidenafil.webp",
         variants: [
-          { quantity: 4, price: "£15.00", link: "/products/sildenafil-50mg-4" },
-          { quantity: 8, price: "£27.50", link: "/products/sildenafil-50mg-8" },
-          { quantity: 16, price: "£50.00", link: "/products/sildenafil-50mg-16" },
-          { quantity: 32, price: "£80.00", link: "/products/sildenafil-50mg-32" },
+          { quantity: 4, price: "£15.00", link: "/products/sildenafil-50mg-pack-of-4" },
+          { quantity: 8, price: "£27.50", link: "/products/sildenafil-50mg-pack-of-8" },
+          { quantity: 16, price: "£50.00", link: "/products/sildenafil-50mg-pack-of-16" },
+          { quantity: 32, price: "£80.00", link: "/products/sildenafil-50mg-pack-of-32" },
         ]
       },
       {
         name: "Tadalafil 10mg",
         image: "/images/products/taladafil.webp",
         variants: [
-          { quantity: 4, price: "£9.00", link: "/products/tadalafil-10mg-4" },
-          { quantity: 8, price: "£16.00", link: "/products/tadalafil-10mg-8" },
-          { quantity: 16, price: "£30.00", link: "/products/tadalafil-10mg-16" },
-          { quantity: 32, price: "£50.00", link: "/products/tadalafil-10mg-32" },
+          { quantity: 4, price: "£9.00", link: "/products/tadalafil-10mg-pack-of-4" },
+          { quantity: 8, price: "£16.00", link: "/products/tadalafil-10mg-pack-of-8" },
+          { quantity: 16, price: "£30.00", link: "/products/tadalafil-10mg-pack-of-16" },
+          { quantity: 32, price: "£50.00", link: "/products/tadalafil-10mg-pack-of-32" },
         ]
       },
       

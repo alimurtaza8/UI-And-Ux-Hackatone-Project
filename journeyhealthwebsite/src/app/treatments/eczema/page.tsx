@@ -227,7 +227,7 @@ const BestSellersSection = () => {
       name: "Eczema Cream",
       price: "£12.00",
       image: "/images/products/betnovate.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/eczema-cream",
     },
   
    

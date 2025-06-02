@@ -203,21 +203,21 @@ const BestSellersSection = () => {
       name: "Promethazine 25mg",
       price: "£12.00",
       image: "/images/products/phernar.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/promethazine-25mg",
     },
 
     {
         name: "Nytol Liquid 300ml",
         price: "£10.00",
         image: "/images/products/nytol.webp", 
-        link: "/products/nytol-25mg",
+        link: "/products/nytol-liquid-300ml",
       },
 
       {
         name: "Nytol 50mg",
         price: "£7.00",
         image: "/images/products/p_1.webp", 
-        link: "/products/nytol-25mg",
+        link: "/products/nytol-50mg",
       },
       {
         name: "Nytol 25mg",

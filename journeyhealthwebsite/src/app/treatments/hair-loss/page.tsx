@@ -223,7 +223,7 @@ const BestSellersSection = () => {
       name: "Finasteride",
       price: "£13.00",
       image: "/images/products/finasteride.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/finasteride",
     },
   
    

@@ -232,7 +232,7 @@ const BestSellersSection = () => {
       name: "Salamol Inhaler",
       price: "£12.00",
       image: "/images/products/salamol.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/salamol-inhaler",
     },
   
    

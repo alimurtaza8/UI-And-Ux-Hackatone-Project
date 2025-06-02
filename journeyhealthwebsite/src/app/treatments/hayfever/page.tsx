@@ -219,19 +219,19 @@ const BestSellersSection = () => {
       name: "Allevia - 120mg",
       price: "£10.00",
       image: "/images/products/allevia.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/allevia-120mg",
     },
     {
         name: "Fexofenadine 180mg",
         price: "£15.00",
         image: "/images/products/fexofenadine.webp", 
-        link: "/products/nytol-25mg",
+        link: "/products/fexofenadine-180mg",
       },
       {
         name: "Fexofenadine 120mg",
         price: "£10.00",
         image: "/images/products/fexofenadine250mg.webp", 
-        link: "/products/nytol-25mg",
+        link: "/products/fexofenadine-120mg",
       },
 
    

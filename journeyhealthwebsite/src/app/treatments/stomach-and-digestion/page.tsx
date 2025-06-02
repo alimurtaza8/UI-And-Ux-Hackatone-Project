@@ -191,10 +191,10 @@ const HeroSection: React.FC = () => {
 const BestSellersSection = () => {
   const products = [
     {
-      name: "Nitrofurantoin 100mg",
+      name: "Omeprazole",
       price: "£8.00",
       image: "/images/products/omepr.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/omeprazole",
     },
   
   ];

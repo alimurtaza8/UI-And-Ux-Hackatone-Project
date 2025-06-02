@@ -84,7 +84,7 @@ const HomeHero = () => {
         <div className="flex flex-col lg:flex-row items-start mt-10">
           {/* Left side (60%) */}
           <div className="lg:w-3/5 mb-12 lg:mb-0 pr-8">
-          <h1 className="text-6xl md:text-7xl font-bold text-lime-400 mb-2">
+          <h1 className="text-6xl md:text-7xl font-bold text-[#b9d765] mb-2">
               On-demand
             </h1>
             <h2 className="text-6xl md:text-7xl font-bold text-teal-900 mb-6">

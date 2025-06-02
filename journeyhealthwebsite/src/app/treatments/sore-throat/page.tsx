@@ -197,14 +197,14 @@ const BestSellersSection = () => {
       name: "Phenoxymethylpenicillin",
       price: "£15.00",
       image: "/images/products/phonos.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/phenoxymethylpenicillin",
     },
 
     {
         name: "Clarithromycin",
         price: "£15.00",
         image: "/images/products/clarith.webp", 
-        link: "/products/nytol-25mg",
+        link: "/products/clarithromycin",
       },
   
   ];

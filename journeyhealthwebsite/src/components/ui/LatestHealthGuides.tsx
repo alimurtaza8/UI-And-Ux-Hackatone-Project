@@ -37,7 +37,7 @@ const LatestHealthGuides: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-12">
           <span className="text-gray-900">Latest </span>
-          <span className="text-lime-400">health guides</span>
+          <span className="text-[#b9d765]">health guides</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

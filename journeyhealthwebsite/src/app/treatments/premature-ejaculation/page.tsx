@@ -208,34 +208,34 @@ const BestSellersSection = () => {
       name: "Stud 100 Delay Spray",
       price: "£8.00",
       image: "/images/products/stud.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/stud-100-delay-spray",
     },
 
     {
         name: "Priligy 60mg (3 Tablets)",
         price: "£30.00",
         image: "/images/products/pri_2.webp", 
-        link: "/products/nytol-25mg",
+        link: "/products/priligy-60mg-3-tablets",
       },
 
       {
         name: "Priligy 60mg (6 Tablets)",
         price: "£52.00",
         image: "/images/products/pri_2.webp", 
-        link: "/products/nytol-25mg",
+        link: "/products/priligy-60mg-6-tablets",
       },
       {
         name: "Priligy 30mg (3 Tablets)",
         price: "£25.00",
         image: "/images/products/pri_3.webp", 
-        link: "/products/nytol-25mg",
+        link: "/products/priligy-30mg-3-tablets",
       },
 
       {
         name: "Priligy 30mg (6 Tablets)",
         price: "£48.00",
         image: "/images/products/pri_3.webp", 
-        link: "/products/nytol-25mg",
+        link: "/products/priligy-30mg-6-tablets",
       },
      
   

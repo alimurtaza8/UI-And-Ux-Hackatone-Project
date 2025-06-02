@@ -47,7 +47,7 @@ const PopularTreatments: FC = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-bold mb-12">
         <span className="text-teal-900">Popular </span>
-        <span className="text-lime-400">treatments</span>
+        <span className="text-[#b9d765]">treatments</span>
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

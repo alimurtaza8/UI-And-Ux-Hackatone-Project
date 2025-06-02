@@ -39,7 +39,7 @@ const BestSellersSection = () => {
       <div className="flex justify-between items-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold">
           <span className="text-teal-900">Our </span>
-          <span className="text-lime-400">best sellers</span>
+          <span className="text-[#b9d765]">best sellers</span>
         </h2>
         <Link 
           href="/products" 

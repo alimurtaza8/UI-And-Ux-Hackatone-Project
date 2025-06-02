@@ -231,7 +231,7 @@ const BestSellersSection = () => {
       name: "Noriday Tablets",
       price: "£20.00",
       image: "/images/products/noriday.webp", 
-      link: "/products/nytol-25mg",
+      link: "/products/norida-tablets",
     },
   
    
